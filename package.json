@@ -1,0 +1,23 @@
+{
+  "name": "elastic-proxy",
+  "version": "0.0.0",
+  "description": "HTTP proxy for ElasticSearch cluster with simple auth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/likeastore/elastic-proxy"
+  },
+  "author": "alexander.beletsky@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/likeastore/elastic-proxy/issues"
+  },
+  "homepage": "https://github.com/likeastore/elastic-proxy",
+  "dependencies": {
+    "respawn": "~0.4.2",
+    "http-proxy": "~1.1.4"
+  }
+}
