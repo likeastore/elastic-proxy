@@ -21,7 +21,8 @@ var server = http.createServer(function (req, res) {
 	logger.info('request: ' + req.url + ' accessToken: ' + accessToken + ' referer: ' + req.headers.referer);
 
 	if (!accessToken || accessToken !== config.accessToken) {
-		return res.end();
+		res.statusCode = 401;
+		return res.end('Missing access_token query parameter');
 	}
 
 	proxy.web(req, res, {target: config.target});
