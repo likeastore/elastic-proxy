@@ -17,6 +17,9 @@
     "url": "https://github.com/likeastore/elastic-proxy/issues"
   },
   "homepage": "https://github.com/likeastore/elastic-proxy",
+  "engines": {
+    "node": "0.10.x"
+  },
   "dependencies": {
     "respawn": "~0.4.2",
     "http-proxy": "~1.1.4",
