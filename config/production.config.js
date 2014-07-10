@@ -3,7 +3,7 @@ var config = {
 		token: null
 	},
 
-	target: 'http://localhost:9200',
+	target: process.env.TARGET,
 
 	accessToken: process.env.PROXY_ACCESS_TOKEN
 };
