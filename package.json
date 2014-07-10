@@ -1,6 +1,6 @@
 {
   "name": "elastic-proxy",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "HTTP proxy for ElasticSearch cluster with simple auth",
   "main": "index.js",
   "scripts": {
