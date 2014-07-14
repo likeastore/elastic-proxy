@@ -3,6 +3,7 @@ var httpProxy = require('http-proxy');
 var url = require('url');
 
 var config = require('./config');
+var logger = require('./source/utils/logger');
 
 var port = process.env.PORT || 3010;
 var proxy = httpProxy.createProxyServer();
@@ -17,7 +18,7 @@ var parseAccessToken = function (req) {
 var server = http.createServer(function (req, res) {
 	var accessToken = parseAccessToken(req);
 
-	console.log('request: ' + req.url + ' accessToken: ' + accessToken + ' referer: ' + req.headers.referer);
+	logger.info('request: ' + req.url + ' accessToken: ' + accessToken + ' referer: ' + req.headers.referer);
 
 	if (!accessToken || accessToken !== config.accessToken) {
 		res.statusCode = 401;
@@ -28,5 +29,5 @@ var server = http.createServer(function (req, res) {
 });
 
 server.listen(port, function () {
-	console.log('Likeastore Elastic-Proxy started at: ' + port);
+	logger.info('Likeastore Elastic-Proxy started at: ' + port);
 });
