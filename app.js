@@ -25,7 +25,7 @@ var server = http.createServer(function (req, res) {
 		return res.end('Missing access_token query parameter');
 	}
 
-	proxy.web(req, res, {target: config.target});
+	proxy.web(req, res, {target: config.target, rejectUnauthorized: false});
 });
 
 server.listen(port, function () {
